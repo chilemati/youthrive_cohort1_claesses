@@ -3,46 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portfolio 2</title>
     <link rel="stylesheet" href="./css/index.css" />
+     <!--  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Arimo&family=Dancing+Script:wght@400;500&family=Inconsolata:wght@200..900&family=Luxurious+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Riot&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">Logo</a></li>
-          <li class="group">
-            <a href="#">Blog</a>
-            <a href="#">Sevices</a>
-            <a href="#">About</a>
-          </li>
-          <li class="menu dropdown">
-            <a class="dropbtn" href="#">&#9776;</a>
-            <div class="dropdown-content">
-              <a href="#">Blog</a>
-              <a href="#">Sevices</a>
-              <a href="#">About</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </header>
     <main>
-      <h1>Basic display properties: inline,block and inline block</h1>
-      <!-- block to inline -->
-      <p>block to inline</p>
-      <ol>
-        <li>Inline</li>
-        <li>block</li>
-        <li>Inline-block</li>
-      </ol>
-      <!-- inline to block -->
-      <p>inline to block</p>
-      <div class="inline">
-        <span>Apple</span>
-        <span>Orange</span>
-        <span>Banana</span>
-      </div>
+      <section class="section1">
+        <nav>
+          <ul>
+            <li class="logo">
+              <img class="logo-desktop" src="./imgs/logo 1.svg" alt="logo" />
+              <img class="logo-mobile" src="./images/logo 2.svg" alt="logo" />
+            </li>
+            <li class="group">
+              <a href="#">About me</a>
+              <a href="#">Skills</a>
+              <a href="#">Portfolio</a>
+              <a class="contactMe" href="#">CONTACT ME</a>
+            </li>
+            <li class="menu dropdown">
+              <img class="dropbtn" src="./images/menu.svg" alt="menu" />
+              <div class="dropdown-content">
+               <a href="#">About me</a>
+              <a href="#">Skills</a>
+              <a href="#">Portfolio</a>
+              <a class="" href="#">CONTACT ME</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="line1">
+            <div class="boxa">
+                <div class="text-desktop">
+                    <p class="one">Hi, I am</p>
+                    <p class="two">Tomasz Gajda</p>
+                    <p class="three">Front-end Developer / UI Designer</p>
+                </div>
+                <div class="text-mobile">
+                    <p class="one">my name is Thomas</p>
+                    <p class="two">I’M A DEVELOPER</p>
+                    <p class="three"></p>
+                </div>
+                <div class="icons">
+                    <div class="icon1 i"></div>
+                    <div class="icon2 i"></div>
+                    <div class="icon3 i"></div>
+                </div>
+            </div>
+            <div class="boxb">
+                <div class="text">
+                    this is not my photo, but I dearly hope to get one just like this 
+                </div>
+            </div>
+        </div>
+      </section>
     </main>
     <footer>footer</footer>
   </body>

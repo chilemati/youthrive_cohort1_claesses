@@ -5,104 +5,129 @@
 }
 
 html {
+  font-size: 1rem;
   max-width: 120rem;
-  margin: auto;
-  font-size: 2rem;
 }
 
 body {
-  font-size: 2rem;
+  max-width: 120rem;
 }
 
-header {
-  background-color: black;
-  color: white;
-  min-height: 5vh;
+.section1 {
+  max-width: 120rem;
+  min-height: 95vh;
+  background-image: url("../images/section1_bg.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 65% 100%;
+  background-color: #d7d7d7;
+  margin-top: 0px;
 }
 
-main {
-  max-width: 95%;
-  margin: 1rem auto;
-  border: 1px solid blue;
-  min-height: 65vh;
-  font-size: 1rem;
-}
-
-footer {
-  min-height: 5vh;
-  border: 1px solid gray;
-}
 nav {
-  padding: 0.5rem 2rem;
-  text-align: center;
+  padding-top: 4.5rem;
+  max-width: 100%;
 }
-nav ul li {
-  display: inline-block;
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   list-style-type: none;
 }
-nav a {
-  color: white;
-  font-size: 0.5em;
-  margin-right: 1em;
-  text-decoration: none;
-  text-transform: capitalize;
+
+nav .logo {
+  padding-left: 15vw;
+  flex: 0.5 auto;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav .group {
+  display: flex;
+  gap: 0.5rem;
+  padding-right: 2rem;
+  flex-wrap: nowrap;
 }
 
-/* block to inline */
-ol {
+nav .group a {
+  display: flex;
+  max-width: 9.1875rem;
+  /* height: 2.875rem; */
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
   text-align: center;
+  font-family: Montserrat;
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  padding: 0.8rem 1.5vw;
 }
-ol li {
-  display: inline-block;
-  border: 1px solid red;
-  width: calc(100% / 3.5);
-  height: 200px;
-  margin: 1rem auto;
-  /* padding: 1rem; */
-}
-
-@media screen and (max-width: 654px) {
-  ol li {
-    width: 90%;
-    margin: 0.5rem auto;
-  }
-}
-
-/* inline to block */
-.inline span {
-  display: block;
+nav .group a.contactMe {
+  border-radius: 1.875rem;
+  border: 4px solid #fff;
+  background-color: #fff;
+  color: #000;
+  text-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav .menu {
   display: none;
 }
+nav .logo .white {
+  display: none;
+}
 
-/* use media attribute to make the group disappear and then show the menu icon */
-
-@media screen and (max-width: 787px) {
-  nav {
-    padding: 0.5rem;
+@media screen and (max-width: 1055px) {
+  .section1 {
+    /* background-image: unset; */
+    background-image: url("../images/Background-mobile.png");
+    background-position: center;
+    background-size: cover;
   }
-  .group {
+  nav .group a {
+    color: white;
+  }
+}
+
+@media screen and (max-width: 795px) {
+  nav {
+    height: 3.5625rem;
+    background-color: black;
+    padding-top: 0rem;
+  }
+  nav .group {
     display: none;
   }
+
   nav .menu {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1.27rem;
   }
-  nav .menu a {
-    font-size: 0.6em;
+  nav .logo {
+    padding-left: 1.27rem;
   }
-}
-@media screen and (max-width: 388px) {
-  h1 {
-    font-size: 1rem;
+
+  nav ul {
+    height: inherit;
+    border: 1px solid wheat;
+  }
+  nav .logo .black {
+    display: none;
+  }
+  nav .logo .white {
+    display: flex;
   }
 }
 
+/* dropdown menu */
 .dropbtn {
   /* background-color: #04aa6d; */
   color: white;
@@ -118,22 +143,38 @@ nav .menu {
 
 .dropdown-content {
   display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
+  position: fixed;
+  left: 0rem;
+  top: 3.4rem;
+  background-color: #00000066;
+  width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
   display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: calc(3.5625rem / 2);
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .dropdown:hover .dropdown-content {
@@ -142,4 +183,185 @@ nav .menu {
 
 .dropdown:hover .dropbtn {
   /* background-color: #3e8e41; */
+}
+
+/* end */
+
+/* section1 line1  */
+
+.section1 .line1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));
+  grid-auto-rows: minmax(34rem, auto);
+  margin-top: 2.13rem;
+}
+
+.section1 .boxa {
+  padding-left: 15vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+.section1 .boxa .one {
+  color: #000;
+  text-align: left;
+  font-family: Raleway;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 12.87rem;
+}
+.section1 .boxa .two {
+  color: #000;
+  text-align: left;
+  font-family: Raleway;
+  font-size: 3.5vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-wrap: nowrap;
+  margin-top: 2rem;
+}
+.section1 .boxa .three {
+  color: #909090;
+  text-align: left;
+  font-family: Raleway;
+  font-size: 1.1625vw;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+/* icons */
+.section1 .boxa .icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2.87rem;
+  gap: 1.9vw;
+}
+.section1 .boxa .i {
+  width: 3.8125rem;
+  height: 3.5rem;
+  background-color: #c4c4c4;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.section1 .boxa .icon1 {
+  background-image: url("../images/at.svg");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section1 .boxa .icon2 {
+  background-image: url("../images/github.svg");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section1 .boxa .icon3 {
+  background-image: url("../images/linkedin.svg");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section1 .boxb {
+  background-image: url("../images/user.png");
+  background-size: 75% 100%;
+  background-position: center left;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.section1 .boxb .text {
+  position: absolute;
+  bottom: 0px;
+  width: 8.5rem;
+  height: 3.75rem;
+  color: #000;
+  text-align: justify;
+  font-family: Roboto;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: white;
+  margin-left: calc(100% / 2 - 8.5rem);
+}
+
+.section1 .mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1055px) {
+  .section1 .boxa .one {
+    color: white;
+  }
+  .section1 .boxa .two {
+    color: white;
+  }
+  .section1 .line1 {
+    margin-top: 55.81vh;
+  }
+  .section1 .boxa {
+    padding-left: unset;
+  }
+  .section1 .boxb {
+    display: none;
+  }
+
+  .section1 .desktop {
+    display: none;
+  }
+
+  .section1 .mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section1 .mobile .three {
+    background-image: url("../images/separatorWhite\ 3.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 7.5rem;
+    height: 0.625rem;
+    margin-top: 0.88rem;
+  }
+  .section1 .mobile .one {
+    color: #fff;
+    text-align: center;
+    font-family: "Advent Pro", sans-serif;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: unset;
+  }
+  .section1 .mobile .two {
+    color: #fff;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: unset;
+  }
+  .section1 .boxa .icons {
+    justify-content: center;
+  }
+  .section1 .boxa .icon1 {
+    background-image: url("../images/at-mobile.svg");
+  }
+  .section1 .boxa .icon2 {
+    background-image: url("../images/github-mobile.svg");
+  }
+  .section1 .boxa .icon3 {
+    background-image: url("../images/linkedin-mobile.svg");
+  }
+  .section1 .boxa .i {
+    background-color: unset;
+    box-shadow: unset;
+  }
 }
